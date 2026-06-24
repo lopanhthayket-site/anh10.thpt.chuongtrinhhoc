@@ -1,130 +1,224 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khoá THPT - Lớp Anh thầy Kết</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Khoá luyện thi THPT Anh 10 - Lớp Anh thầy Kết</title>
+
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fff8f0;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+body{
+    font-family:Arial,sans-serif;
+    background:#fff8f0;
+    margin:0;
+    text-align:center;
+}
 
-  header {
-    background-color: #ffd6ba; /* pastel cam nhạt */
-    color: #7a4e3e;
-    padding: 40px 20px;
-    font-size: 36px;
-    font-weight: bold;
-  }
+header{
+    background:#EA7B7B;
+    color:white;
+    padding:30px;
+    font-size:32px;
+    font-weight:bold;
+}
 
-  .button-container {
-    margin: 50px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 900px;
-  }
+.toc-container{
+    max-width:1600px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
 
-  .nav-button {
-    background-color: #a0e7e5; /* pastel xanh nhạt */
-    color: #3a3a3a;
-    border: none;
-    padding: 20px 25px;
-    font-size: 20px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
-    text-decoration: none;
-    flex: 1 1 200px;
-    max-width: 220px;
-  }
+h2{
+    color:#7a4e3e;
+}
 
-  .nav-button:hover {
-    background-color: #ffb3ba; /* pastel hồng nhạt khi hover */
-    transform: translateY(-3px);
-  }
+.toc-item{
+    display:grid;
+    grid-template-columns:2fr 1fr 0.8fr 0.8fr 4fr;
+    gap:10px;
+    margin:10px 0;
+}
 
-  .social-section {
-    margin-top: 60px;
-  }
+.toc-header div{
+    background:#ffe5d9;
+    padding:12px;
+    border-radius:10px;
+    font-weight:bold;
+}
 
-  .social-section h2 {
-    font-size: 24px;
-    color: #7a4e3e;
-    margin-bottom: 20px;
-  }
+.lesson-link,
+.study-session,
+.study-time,
+.video-link,
+.homework-link{
+    padding:12px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#333;
+    display:flex;
+    align-items:center;
+    transition:.3s;
+}
 
-  .social-icons a {
-    display: inline-block;
-    margin: 0 15px;
-    font-size: 40px;
-    color: #a0e7e5; /* pastel xanh nhạt */
-    transition: color 0.3s, transform 0.2s;
-  }
+.lesson-link{
+    background:#a0e7e5;
+    justify-content:flex-start;
+    text-align:left;
+    padding-left:16px;
+}
 
-  .social-icons a:hover {
-    color: #ffb3ba; /* pastel hồng nhạt khi hover */
-    transform: translateY(-5px);
-  }
+.study-session{
+    background:#ffe0ac;
+    justify-content:center;
+}
 
-  footer {
-    margin-top: 50px;
-    padding: 20px;
-    font-size: 16px;
-    color: #555;
-    background-color: #fff0e1;
-  }
+.study-time{
+    background:#ffd6e0;
+    justify-content:center;
+    text-align:center;
+}
 
-  @media (max-width: 600px) {
-    .nav-button {
-      flex: 1 1 100%;
-      max-width: 90%;
-      font-size: 18px;
-      padding: 15px 10px;
+.video-link{
+    background:#ffd6a5;
+    justify-content:center;
+}
+
+.homework-link{
+    background:#f8f9fa;
+    font-weight:normal;
+    text-align:left;
+    line-height:1.6;
+}
+
+.toc-item.lesson:hover .lesson-link,
+.toc-item.lesson:hover .study-session,
+.toc-item.lesson:hover .study-time,
+.toc-item.lesson:hover .video-link,
+.toc-item.lesson:hover .homework-link{
+    background:#fdffb6;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:#ffb3ba;
+    color:#333;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+footer{
+    margin-top:40px;
+    padding:15px;
+    background:#fff0e1;
+}
+
+@media(max-width:768px){
+    .toc-header{
+        display:none;
     }
 
-    .social-icons a {
-      font-size: 35px;
-      margin: 0 10px;
+    .toc-item{
+        grid-template-columns:1fr;
     }
-  }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  Lớp Anh thầy Kết - Luyện thi THPT
+Luyện thi THPT - Lớp Anh thầy Kết
 </header>
 
-<div class="button-container">
-  <a href="https://lopanhthayket-site.github.io/anh11.thpt.chuongtrinhhoc/" class="nav-button">Khoá học Anh 10</a>
-  <a href="https://lopanhthayket-site.github.io/anh11.thpt.tuvungbaihoc/" class="nav-button">Từ vựng bài học</a>
-  <a href="https://ketng91.github.io/khoathpt_Luyendocsongngu/" class="nav-button">Luyện Đọc song ngữ</a>
-  <a href="https://ketng91.github.io/khoathpt_grammar/" class="nav-button">Trắc nghiệm Grammar</a>
-  <a href="https://ketng91.github.io/khoathpt_tuvung/" class="nav-button">Trắc nghiệm Từ vựng</a>
-  <a href="https://ketng91.github.io/gametuvung/" class="nav-button">Game từ vựng</a>
-  <a href="#" class="nav-button">Ket's notes</a>
+<div class="toc-container">
+
+<h2>📚 Chương trình luyện thi THPT Anh 10</h2>
+
+<div class="toc-item toc-header">
+    <div>Bài học</div>
+    <div>Ca học</div>
+    <div>Thời gian</div>
+    <div>Bài giảng</div>
+    <div>BTVN / Ghi chú</div>
 </div>
 
-<!-- ====== Phần MXH ====== -->
-<div class="social-section">
-  <h2>MXH: Lớp Anh thầy Kết</h2>
-  <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=100095128431844" target="_blank" title="Facebook"><i class="fab fa-facebook-square"></i></a>
-    <a href="https://www.youtube.com/@LopmonAnhthayKet" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.tiktok.com/@lopanhthayket" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-  </div>
+<div id="lesson-list"></div>
+
+<a href="https://lopanhthayket-site.github.io/anh10.thpt/" class="back-btn">
+⬅ Quay về trang chính
+</a>
+
 </div>
 
 <footer>
-  © 2026 Lớp Anh thầy Kết. All rights reserved.
+© 2026 Lớp Anh thầy Kết. All rights reserved.
 </footer>
+
+<script>
+
+const lessons = [
+
+{
+    lesson:"Lesson 1: Reading - Topic: FAMILY LIFE; Grammar: Thành phần câu - Thì Đơn",
+    lessonLink:"",
+    session:"Ca sáng",
+    time:"T7 27/06<br>8:00 - 9:30",
+    video:"",
+    homework:"",
+    note:"Học từ vựng bài học. Ôn Grammar đã học. Làm BTVN."
+},
+{
+    lesson:"Lesson 2: Reading - Topic: FAMILY LIFE; Grammar: Luyện tập",
+    lessonLink:"",
+    session:"Ca sáng",
+    time:"T3 30/06<br>8:00 - 9:30",
+    video:"",
+    homework:"",
+    note:"Học từ vựng bài học. Ôn Grammar đã học. Làm BTVN."
+},
+
+
+];
+
+const container = document.getElementById("lesson-list");
+
+lessons.forEach(item => {
+
+container.innerHTML += `
+<div class="toc-item lesson">
+
+<a class="lesson-link" href="${item.lessonLink}" target="_blank">
+${item.lesson}
+</a>
+
+<div class="study-session">
+${item.session}
+</div>
+
+<div class="study-time">
+${item.time}
+</div>
+
+<a class="video-link" href="${item.video}" target="_blank">
+Video
+</a>
+
+<a class="homework-link" href="${item.homework}" target="_blank">
+${item.note}
+</a>
+
+</div>
+`;
+
+});
+
+</script>
 
 </body>
 </html>
+```
